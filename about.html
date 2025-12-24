@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sachin Welding Works</title>
+  <link rel = "icon" href = "public/logo_bg_remove_1.png">
+  <link rel="stylesheet" href="./about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-V/9RJ+7cK8Q7bFvlGDFEk9cIzRkZnO4I/n9ZqCHNmS9YEXom1kOGg5p27TuKlX3vqtYTDHVqEl9zF2slroZ+og=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Correct Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    .contact-banner {
+      position: relative;
+      width: 100%;
+    }
+
+    .banner-image {
+      background-image: url('public/aboutus.webp');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .banner-image h1 {
+      color: white;
+      font-size: 48px;
+      z-index: 1;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      margin-bottom: 130px;
+      font-family: 'Merriweather', serif;
+      padding: 0 20px;
+    }
+
+    .banner-image svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .banner-image h1 {
+        font-size: 38px;
+        margin-bottom: 100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .banner-image {
+        height: 50vh;
+      }
+
+      .banner-image h1 {
+        font-size: 30px;
+        margin-bottom: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner-image {
+        height: 45vh;
+      }
+
+      .banner-image h1 {
+        font-size: 38px;
+        margin-bottom: 60px;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+<!-- Navbar Header -->
+<!-- Navbar Header -->
+<header>
+  <div class="top-nav">
+
+    <!-- LOGO LEFT SIDE -->
+    <div class="logo-with-text">
+      <a href="index.html">
+        <img src="public/logo_bg_remove_1.png" alt="Logo" class="company-logo" />
+      </a>
+      <span class="company-title">Sachin Welding Works</span>
+    </div>
+
+    <!-- HAMBURGER RIGHT SIDE -->
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <!-- FULL MENU -->
+    <nav class="main-menu" id="nav-menu">
+
+        <div class="close-btn" id="close-btn">&times;</div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+
+      <div class="dropdown">
+      <a href="product.html" class="dropdown-toggle">
+    Products <i class="fas fa-caret-down"></i>
+  </a>
+        <div class="dropdown-menu">
+            <a href="product.html?product=0">Stainless Steel Rack</a>
+            <a href="product.html?product=1">Stainless Steel Palette</a>
+            <a href="product.html?product=2">Stainless Steel Cage</a>
+            <a href="product.html?product=3">Aluminium Battery Box</a>
+            <a href="product.html?product=4">Stainless Steel Table</a>
+            <a href="product.html?product=5">Stainless Steel Trolley</a>
+            <a href="product.html?product=6">Stainless Steel Solar Tank</a>
+            <a href="product.html?product=7">Stainless Steel Chiller Tank</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="service.html" class="dropdown-toggle">
+    Services <i class="fas fa-caret-down"></i>
+  </a>
+        <div class="dropdown-menu">
+            <a href="service.html?product=0">Aluminium Tig Welding</a>
+            <a href="service.html?product=1">Stainless Steel Tig welding </a>
+            <a href="service.html?product=2">MS Tig Welding</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="jobwork.html" class="dropdown-toggle">
+    Job Work <i class="fas fa-caret-down"></i>
+  </a>
+        <div class="dropdown-menu">
+            <a href="jobwork.html?product=0">Aluminium Job Work</a>
+            <a href="jobwork.html?product=1">Stainless Steel Job Work</a>
+            <a href="jobwork.html?product=2">Stainless Steel Pipeline</a>
+        </div>
+      </div>
+
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    // Open Menu
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+
+    // Close Menu
+    closeBtn.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+
+            // MOBILE ONLY
+            if (window.innerWidth <= 768) {
+
+                const dropdownMenu = btn.nextElementSibling;
+
+                // 1st click → dropdown open kare
+                if (!dropdownMenu.classList.contains("open")) {
+                    e.preventDefault();
+                    dropdownMenu.classList.add("open");
+                } 
+                // 2nd click → actual page open ho
+                else {
+                    window.location.href = btn.getAttribute("href");
+                }
+            }
+            // DESKTOP → No change (default behavior)
+        });
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- About Us Banner Section -->
+  <!-- Contact Us Banner Section -->
+  <section class="contact-banner">
+    <div class="banner-image">
+      <h1>About us</h1>
+    </div>
+  </section>
+
+
+  <!-- About Us Section -->
+  <section class="content-section">
+    <div class="left-content">
+      <h1>Our Story</h1>
+      <p>
+        Sachin Welding Works, established in the year 2017, is a reputed manufacturer based in Pune, Maharashtra. The company specializes in producing a wide range of stainless steel products including Rectangular Stainless Steel Palki, Stainless Steel Hand Wash Kitchen Sink, 36 Inch Stainless Steel Barricade, and Stainless Steel Storage Tray Rack Trolley, along with various other custom-made items. With a strong commitment to quality and precision, the company has built a solid reputation in the market for delivering durable, functional, and aesthetically designed stainless steel solutions that cater to both industrial and domestic needs.
+      </p>
+      <p>
+        Under the capable leadership of Mr. Sachin Atmaram More, the firm operates as a proprietorship with a workforce of up to ten dedicated employees. The company conducts its operations from its registered address at First Floor, Flat No. 204, Prathmeshwara Apartment, Yewalwadi, Pune – 411046, Maharashtra, India. Its GST registration (27BMLPM4809F1ZV) was obtained on 24th January 2018.
+      </p>
+    </div>
+
+    <div class="right-images">
+      <div class="img-box" id="img1">
+        <img src="products/10.jpeg" alt="WNS Cares">
+      </div>
+      <div class="img-box" id="img2">
+        <img src="products/11.jpeg" alt="We Are Making Headlines">
+      </div>
+      <!-- <div class="img-box" id="img3">
+        <img src="public/hero3.avif" alt="Life at WNS">
+      </div>
+      <div class="img-box" id="img4">
+        <img src="public/hero4.avif" alt="You at WNS">
+      </div> -->
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <!-- Why choose Us Section -->
+
+   <section class="razor-section">
+  <div class="razor-container">
+    <div class="razor-left">
+      <p class="breadcrumb">Why Choose</p>
+      <h1 class="razor-title">Sachin Welding Works</h1>
+      <p class="razor-desc">
+        At Sachin Welding Works, we take pride in delivering products that combine quality, innovation, and durability. Here’s why our clients trust us:
+      </p>
+    </div>
+
+    <div class="razor-right">
+      <div class="razor-card">
+        <i class="fa-solid fa-check-circle"></i>
+        <div>
+          <h3>Quality Assurance</h3>
+          <p>Every product is crafted using premium-grade stainless steel and passes through strict quality checks.</p>
+        </div>
+      </div>
+
+      <div class="razor-card">
+        <i class="fa-solid fa-people-group"></i>
+        <div>
+          <h3>Experienced Team</h3>
+          <p>Led by skilled professionals with years of experience in metal fabrication and welding.</p>
+        </div>
+      </div>
+
+      <div class="razor-card">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div>
+          <h3>Timely Delivery</h3>
+          <p>We value our clients’ time and ensure prompt production and on-time dispatch.</p>
+        </div>
+      </div>
+
+      <div class="razor-card">
+        <i class="fa-solid fa-face-smile"></i>
+        <div>
+          <h3>Customer Satisfaction</h3>
+          <p>We maintain long-term relationships by providing excellent service and post-delivery support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Infrastructure Section -->
+
+  <!-- <div class="container">
+    <div class="title">Our Infrastructure</div>
+    <div class="subtitle">All employees believe that a good workstation begins with an orderly workplace. Our facility
+      ensures seamless production through effective handling and meticulous testing.</div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Advanced Manufacturing Facility</h3>
+        <p>Our self-compassion tools and trauma-informed strategies proactively address stress, helping professionals
+          avoid burnout and maintain emotional health.</p>
+      </div>
+
+      <div class="card">
+        <h3>Specialized Production Divisions</h3>
+        <p>We possess specialized divisions for Laser Marking, Fiber Laser Welding, CNC Fiber Laser Cutting with skilled
+          craftsmen.</p>
+      </div>
+
+      <div class="card">
+        <h3>Quality Testing Labs</h3>
+        <p>Meticulous product testing facilities ensure every machine meets our high standards before delivery to
+          customers.</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Contact Section -->
+  <section class="start-project">
+    <h1>Ready to Transform Your Manufacturing?</h1>
+    <p>
+      Contact us today for expert consultation and custom machinery solutions.
+    </p>
+  <a href="contact.html">  <button onclick="scheduleVisit()">Enquiry Now</button></a>
+  </section>
+
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Show button on scroll
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      scrollBtn.style.display = window.scrollY > 100 ? "flex" : "none";
+    };
+
+    // Scroll to top smoothly
+    scrollBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+
+
+<!-- GSAP Animation Script -->
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".left-content", {
+    scrollTrigger: {
+      trigger: ".left-content",
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(".img-box", {
+    scrollTrigger: {
+      trigger: ".right-images",
+      start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+
+  gsap.from(".about-circle", {
+    scrollTrigger: {
+      trigger: ".about-circle-container",
+      start: "top 80%",
+    },
+    scale: 0.5,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.3,
+    ease: "power2.out"
+  });
+
+</script>
+
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- WhatsApp Button -->
+  <div id="whatsappbutton-container"></div>
+
+
+  <!-- Script  -->
+  <script src="footer.js"></script>
+  <script src="script.js"></script>
+  <script src="whatsappbutton.js"></script>
+
+</body>
+
+</html>

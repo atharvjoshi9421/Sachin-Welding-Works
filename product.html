@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Welding Works</title>
+    <link rel = "icon" href = "public/logo_bg_remove_1.png">
+    <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-V/9RJ+7cK8Q7bFvlGDFEk9cIzRkZnO4I/n9ZqCHNmS9YEXom1kOGg5p27TuKlX3vqtYTDHVqEl9zF2slroZ+og==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Correct Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+<body>
+<!-- Navbar Header -->
+<!-- Navbar Header -->
+<header>
+  <div class="top-nav">
+
+    <!-- LOGO LEFT SIDE -->
+    <div class="logo-with-text">
+      <a href="index.html">
+        <img src="public/logo_bg_remove_1.png" alt="Logo" class="company-logo" />
+      </a>
+      <span class="company-title">Sachin Welding Works</span>
+    </div>
+
+    <!-- HAMBURGER RIGHT SIDE -->
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <!-- FULL MENU -->
+    <nav class="main-menu" id="nav-menu">
+
+        <div class="close-btn" id="close-btn">&times;</div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+
+      <div class="dropdown">
+      <a href="product.html" class="dropdown-toggle">
+    Products <i class="fas fa-caret-down"></i>
+  </a>
+        <div class="dropdown-menu">
+            <a href="product.html?product=0">Stainless Steel Rack</a>
+            <a href="product.html?product=1">Stainless Steel Palette</a>
+            <a href="product.html?product=2">Stainless Steel Cage</a>
+            <a href="product.html?product=3">Aluminium Battery Box</a>
+            <a href="product.html?product=4">Stainless Steel Table</a>
+            <a href="product.html?product=5">Stainless Steel Trolley</a>
+            <a href="product.html?product=6">Stainless Steel Solar Tank</a>
+            <a href="product.html?product=7">Stainless Steel Chiller Tank</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="service.html" class="dropdown-toggle">
+    Services <i class="fas fa-caret-down"></i>
+  </a>
+        <div class="dropdown-menu">
+            <a href="service.html?product=0">Aluminium Tig Welding</a>
+            <a href="service.html?product=1">Stainless Steel Tig welding </a>
+            <a href="service.html?product=2">MS Tig Welding</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="jobwork.html" class="dropdown-toggle">
+    Job Work <i class="fas fa-caret-down"></i>
+  </a>
+        <div class="dropdown-menu">
+            <a href="jobwork.html?product=0">Aluminium Job Work</a>
+            <a href="jobwork.html?product=1">Stainless Steel Job Work</a>
+            <a href="jobwork.html?product=2">Stainless Steel Pipeline</a>
+        </div>
+      </div>
+
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    // Open Menu
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+
+    // Close Menu
+    closeBtn.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+
+            // MOBILE ONLY
+            if (window.innerWidth <= 768) {
+
+                const dropdownMenu = btn.nextElementSibling;
+
+                // 1st click → dropdown open kare
+                if (!dropdownMenu.classList.contains("open")) {
+                    e.preventDefault();
+                    dropdownMenu.classList.add("open");
+                } 
+                // 2nd click → actual page open ho
+                else {
+                    window.location.href = btn.getAttribute("href");
+                }
+            }
+            // DESKTOP → No change (default behavior)
+        });
+    });
+
+});
+</script>
+
+
+
+
+  <!-- Product Banner Section -->
+<section class="contact-banner">
+  <div class="banner-image">
+    <h1>Product</h1>
+    </svg>
+  </div>
+</section>
+
+<!-- Product Section -->
+
+
+ <div class="container">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+    <h2>Product Categories</h2>
+
+    <div class="category active" onclick="showProduct(0)">Stainless Steel Rack</div>
+    <div class="category" onclick="showProduct(1)">Stainless Steel Palette</div>
+    <div class="category" onclick="showProduct(2)">Stainless Steel Cage</div>
+    <div class="category" onclick="showProduct(3)">Aluminium Battery Box</div>
+    <div class="category" onclick="showProduct(4)">Stainless Steel Table</div>
+    <div class="category" onclick="showProduct(5)">Stainless Steel Trolley</div>
+    <div class="category" onclick="showProduct(6)">Stainless Steel Solar Tank</div>
+    <div class="category" onclick="showProduct(7)">Stainless Steel Chiller Tank</div>
+    <div class="category" onclick="showProduct(8)">Stainless Steel Barricade</div>
+    <div class="category" onclick="showProduct(9)">Stainless Steel Steam Tank</div>
+    <div class="category" onclick="showProduct(10)">Stainless Steel Wall Guard</div>
+    <div class="category" onclick="showProduct(11)">Aluminium Gutter Work</div>
+    <div class="category" onclick="showProduct(12)">All Metal Pipelines</div>
+  </div>
+
+  <!-- RIGHT CONTENT AREA -->
+  <div class="content">
+    <h1 id="title">Stainless Steel Rack</h1>
+
+    <p id="description">
+      High-strength stainless steel racks designed for storage, industrial use, and commercial applications. These racks are rust-proof, durable, and capable of handling heavy loads, making them ideal for warehouses, kitchens, hospitals, and workshops. Custom sizes and multi-layer options are available.
+    </p>
+    
+    <!-- FEATURES ICON BOXES -->
+<div class="service-features">
+  <div class="feature-box">
+    <i class="fa-solid fa-award"></i>
+    <p>High Quality</p>
+  </div>
+
+  <div class="feature-box">
+    <i class="fa-solid fa-link"></i>
+    <p>Smooth Joints</p>
+  </div>
+
+  <div class="feature-box">
+    <i class="fa-solid fa-brush"></i>
+    <p>Aesthetic Finish</p>
+  </div>
+</div>
+
+   <div class="image-grid" id="imageGrid"></div>
+  </div>
+
+</div>
+
+
+  <!-- Contact Section -->
+  <section class="start-project">
+    <h1>Ready to Transform Your Manufacturing?</h1>
+    <p>
+      Contact us today for expert consultation and custom machinery solutions.
+    </p>
+  <a href="contact.html">  <button onclick="scheduleVisit()">Enquiry Now</button></a>
+  </section>
+
+  
+<!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Show button on scroll
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      scrollBtn.style.display = window.scrollY > 100 ? "flex" : "none";
+    };
+
+    // Scroll to top smoothly
+    scrollBtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+
+
+<!-- Footer -->
+ <div id="footer-container"></div>
+
+ <!-- WhatsApp Button -->
+<div id="whatsappbutton-container"></div>
+
+<!-- Top Scroll Bar -->
+
+<!-- Script  -->
+    <script src="footer.js"></script>
+    <script src="product.js"></script>
+    <script src="whatsappbutton.js"></script>
+
+
+</body>
+</html>

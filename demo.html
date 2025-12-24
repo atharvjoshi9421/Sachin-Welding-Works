@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Wave Banner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-banner {
+    position: relative;
+    text-align: center;
+    padding: 120px 20px 0 20px;
+    color: white;
+    font-family: serif;
+    font-size: 50px;
+    font-weight: bold;
+    background-image: url('https://i.imgur.com/bUvatxg.jpeg'); /* Replace with your red texture image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Text style */
+.about-banner h1 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Wave shape */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+    .about-banner {
+        padding-top: 80px;
+    }
+    
+    .about-banner h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-banner h1 {
+        font-size: 28px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="about-banner">
+        <h1>About us</h1>
+
+        <!-- Wave Shape -->
+        <svg class="wave" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1" 
+                  d="M0,192L60,170.7C120,149,240,107,360,96C480,85,600,107,720,138.7C840,171,960,213,1080,229.3C1200,245,1320,235,1380,229.3L1440,224V320H0Z">
+            </path>
+        </svg>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

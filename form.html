@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* Contact Section */
+.contact-section {
+  background: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card Wrapper */
+.contact-wrapper {
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fefaf9;
+  padding: 40px 30px;
+}
+
+/* Right Card */
+.contact-right h2 {
+  color: #1F2A44;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-family: "Merriweather", serif;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.row.full {
+  flex-direction: column;
+}
+
+input,
+select,
+textarea {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+.con-btn-si {
+  background: #8B1C13;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+  font-family: "Merriweather", serif;
+}
+
+.con-btn-si:hover {
+  background-color: white;
+  color: #8B1C13;
+  border: 1px solid #8B1C13;
+}
+
+/* Responsive - Tablets & Mobiles */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 30px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-right h2 {
+    font-size: 24px;
+  }
+
+  .con-btn-si {
+    font-size: 15px;
+  }
+}
+
+/* Responsive - Small Mobiles */
+@media (max-width: 480px) {
+  .contact-wrapper {
+    padding: 20px 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .contact-right h2 {
+    font-size: 20px;
+  }
+
+  .con-btn-si {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    
+  <!-- Contact Form -->
+<form action="https://formsubmit.co/gandas.dhanashree@gmail.com" method="POST">
+  <!-- Name and Subject -->
+  <div class="row">
+    <input type="text" name="name" placeholder="Enter your name*" required />
+    <input type="text" id="subjectInput" name="subject" placeholder="Enter your subject*" required />
+  </div>
+
+  <!-- Phone and Company -->
+  <div class="row">
+    <input type="tel" name="phone" placeholder="Enter your phone*" required />
+    <input type="text" name="company" placeholder="Enter company name*" required />
+  </div>
+
+  <!-- Product Category -->
+  <div class="row full">
+    <select name="product_category" required>
+      <option value="">Select a product category</option>
+      <option value="Fiber Laser Metal Cutting Machines">Fiber Laser Metal Cutting Machines</option>
+      <option value="Fiber Laser Welding Machines">Fiber Laser Welding Machines</option>
+      <option value="CO2 Laser Cutting Machine">CO2 Laser Cutting Machine</option>
+      <option value="Fiber Laser Marking Machine">Fiber Laser Marking Machine</option>
+      <option value="CNC Router Machines">CNC Router Machines</option>
+      <option value="Vinyl Cutting Plotter Machine">Vinyl Cutting Plotter Machine</option>
+    </select>
+  </div>
+
+  <!-- Requirements -->
+  <div class="row full">
+    <textarea rows="4" name="requirements" placeholder="Tell us about your requirements..." required></textarea>
+  </div>
+
+  <!-- Send Button -->
+  <button type="submit" class="con-btn-si">Send Inquiry</button>
+</form>
+
+<script>
+// Prefill subject from URL
+const params = new URLSearchParams(window.location.search);
+const subject = params.get("subject");
+if (subject) {
+  document.getElementById("subjectInput").value = decodeURIComponent(subject);
+}
+</script>
+
+</body>
+</html>

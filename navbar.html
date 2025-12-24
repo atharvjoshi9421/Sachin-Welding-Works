@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sachin Welding Works</title>
+    <link rel="stylesheet" href="navbar.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="top-nav">
+
+    <!-- LOGO LEFT SIDE -->
+    <div class="logo-with-text">
+      <a href="index.html">
+        <img src="public/logo_bg_remove_1.png" alt="Logo" class="company-logo" />
+      </a>
+      <span class="company-title">Sachin Welding Works</span>
+    </div>
+
+    <!-- HAMBURGER RIGHT SIDE -->
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <!-- FULL MENU -->
+    <nav class="main-menu" id="nav-menu">
+
+        <div class="close-btn" id="close-btn">&times;</div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+
+      <div class="dropdown">
+      <a href="product.html">  <button class="dropdown-toggle">Products <i class="fas fa-caret-down"></i></button> </a>
+        <div class="dropdown-menu">
+            <a href="product.html?product=0">Stainless Steel Rack</a>
+            <a href="product.html?product=1">Stainless Steel Palette</a>
+            <a href="product.html?product=2">Stainless Steel Cage</a>
+            <a href="product.html?product=3">Aluminium Battery Box</a>
+            <a href="product.html?product=4">Stainless Steel Table</a>
+            <a href="product.html?product=5">Stainless Steel Trolley</a>
+            <a href="product.html?product=6">Stainless Steel Solar Tank</a>
+            <a href="product.html?product=7">Stainless Steel Chiller Tank</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle">Services <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-menu">
+            <a href="service.html?product=0">Aluminium Tig Welding</a>
+            <a href="service.html?product=1">Stainless Steel Tig welding </a>
+            <a href="service.html?product=2">MS Tig Welding</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle">Job Work <i class="fas fa-caret-down"></i></button>
+        <div class="dropdown-menu">
+            <a href="jobwork.html?product=0">Aluminium Job Work</a>
+            <a href="jobwork.html?product=1">Stainless Steel Job Work</a>
+            <a href="jobwork.html?product=2">Stainless Steel Pipeline</a>
+        </div>
+      </div>
+
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- JS -->
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    // Open Menu
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+
+    // Close Menu
+    closeBtn.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+    });
+
+    // Mobile dropdowns
+    document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                btn.nextElementSibling.classList.toggle("open");
+            }
+        });
+    });
+
+});
+</script>
+
+
+
+</body>
+</html>
