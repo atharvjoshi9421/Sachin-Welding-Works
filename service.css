@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', serif;
 }
 
 /* HEADER */
@@ -305,7 +305,7 @@ body {
   font-weight: bold;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   margin-bottom: 130px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Playfair Display', serif;
   padding: 0 20px;
 }
 
@@ -353,7 +353,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;;
 }
 
 body {
@@ -376,7 +376,7 @@ body {
 
 .sidebar h2 {
   margin-bottom: 28px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Playfair Display', serif;;
 }
 
 .category {
@@ -417,7 +417,7 @@ body {
 
 h1 {
   margin-bottom: 15px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family:'Playfair Display', serif;
 }
 
 h3 {
@@ -464,7 +464,7 @@ ul li {
   font-size: 18px;
   font-weight: 600;
   transition: 0.3s;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .enq-btn:hover {
@@ -493,7 +493,7 @@ ul li {
 
 .start-project h1 {
   color: #1F2A44;
-  font-family: "Merriweather";
+  font-family: 'Playfair Display', serif;
   font-size: 44px;
   margin-bottom: 20px;
 }
@@ -516,7 +516,7 @@ ul li {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .start-project button:hover {

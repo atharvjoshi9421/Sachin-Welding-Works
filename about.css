@@ -303,16 +303,20 @@ body {
 .left-content h1 {
   font-size: 44px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: #1F2A44;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1{
+  padding-top: 30px;
 }
 
 .left-content p {
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Segoe UI', sans-serif;;
 }
 
 .left-content a {
@@ -465,7 +469,7 @@ body {
   color: #555;
   margin-bottom: 30px;
   max-width: 90%;
-  font-family: "Roboto", sans-serif;
+  font-family:  'Segoe UI', sans-serif; 
 }
 
 .razor-buttons {
@@ -515,7 +519,7 @@ body {
 .razor-card p {
   font-size: 15px;
   color: #555;
-  font-family: "Roboto", sans-serif;
+  font-family:  'Segoe UI', sans-serif;
 }
 
 .razor-card a {
@@ -605,6 +609,19 @@ body {
   line-height: 1.6;
   font-family: Roboto;
 }
+.razor-title {
+    
+    font-family: 'Playfair Display', serif;
+}
+.razor-card h3{
+  font-family: 'Playfair Display', serif;
+}
+.start-project h1{
+   font-family: 'Playfair Display', serif;
+}
+    .banner-image h1{
+         font-family: 'Playfair Display', serif;
+    }
 
 /* Responsive Queries */
 
@@ -612,7 +629,11 @@ body {
   .card {
     width: 45%;
   }
+      .left-content h1 {
+        font-family: 'Playfair Display', serif;
+    }
 }
+
 
 @media (max-width: 768px) {
   .title {
@@ -672,7 +693,7 @@ body {
   max-width: 800px;
   margin: 0 auto 40px;
   line-height: 1.6;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .start-project button {
